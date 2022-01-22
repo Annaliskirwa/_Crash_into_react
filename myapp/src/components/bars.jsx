@@ -6,4 +6,10 @@ const Bar2 = ()=>{
     return<h1>Bar Two</h1>
 };
 
-export { Bar1, Bar2}
+const MyCatsAge = ({age})=>{
+    return (
+        <span>Kelly's age: {age}</span>
+    )
+}
+
+export { Bar1, Bar2, MyCatsAge}
