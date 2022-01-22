@@ -10,8 +10,8 @@ function App() {
 function MyAge(){
   return(
     <div>
-      <h2>Starting out on components</h2>
-      <p>My age is 23</p>
+      <h2 className="w3-blue">Starting out on components</h2>
+      <p style={{color:"red"}}>My age is 23</p>
     </div>
   )
 }
