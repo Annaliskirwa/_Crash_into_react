@@ -6,9 +6,9 @@ const Bar2 = ()=>{
     return<h1>Bar Two</h1>
 };
 
-const MyCatsAge = ({age})=>{
+const MyCatsAge = (prop)=>{
     return (
-        <span>Kelly's age: {age}</span>
+        <span>Kelly's age: {prop.age}</span>
     )
 }
 
