@@ -1,11 +1,11 @@
 import {Bar1, Bar2, MyCatsAge} from "./components/bars";
+import StateButton from "./components/StateButton";
 
 function App() {
   let x = catsAge(23)
   return (
     <div>
-      <h1><MyCatsAge age = {23}/></h1>
-      <h2> The cat will die at {x}</h2>
+     <StateButton/>
     </div>
   );
 }
