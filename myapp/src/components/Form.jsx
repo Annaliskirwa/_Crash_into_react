@@ -11,6 +11,14 @@ const Myform = ()=>{
     useEffect(()=>{
         console.log(inputs)
     });
+
+    function submit(){
+        console.log(inputs);
+    }
+    function clear(){
+        setInputs(int);
+    }
+
     return (
         <div>
             <h1>My cool form</h1>
@@ -26,7 +34,8 @@ const Myform = ()=>{
                 </p>
             </div>
             <div className = "w3-margin-top w3-center">
-                <button className="w3-button w3-round w3-green w3-ripple ">Submit</button>
+                <button className="w3-button w3-round w3-green w3-ripple" onClick = {()=>{submit()}}>Submit</button>
+                <button className="w3-button w3-round w3-orange w3-ripple w3-margin-left w3-margin-right" onClick={()=>{clear()}}>Clear</button>
             </div>
             </div>
         </div>
