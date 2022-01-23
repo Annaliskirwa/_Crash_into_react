@@ -17,7 +17,7 @@ const StateButton = ()=>{
             <button onClick={()=>increment()} className = "w3-button w3-ripple w3-round w3-margin-left w3-margin-right w3-blue">
                 Increment
             </button>
-            <span className = "w3-xxlarge w3-margin-left w3-margin-right">{}</span>
+            <span className = "w3-xxlarge w3-margin-left w3-margin-right">{age}</span>
             <button onClick={()=>decrement()} className = "w3-button w3-ripple w3-round w3-margin-left w3-margin-right w3-red">
                 Decrement
             </button>
