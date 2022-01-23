@@ -31,7 +31,7 @@ const EffectComp = ()=>{
 
     return (
         <div>
-            <h1>The window size is {wSize}</h1>
+        <p>The window size is {wSize}</p>
         <button onClick={() => increment()} className={'w3-button w3-ripple w3-round w3-margin-left w3-margin-right w3-blue ${bColor}'}>
             Increment
         </button>
@@ -43,7 +43,7 @@ const EffectComp = ()=>{
     )
 }
 
-const StateButton = ({cat})=>{
+const StateButton = ({cat, wSize})=>{
 
 
     return(
