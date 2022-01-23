@@ -10,6 +10,7 @@ const StateButton = ()=>{
     }
 
     function decrement(){
+        setCat({...cat,age:cat.age - 1});
         setAge(age-1);
     }
 
