@@ -4,6 +4,7 @@ const EffectComp = ()=>{
     const [age, setAge]=useState(0);
     const [cat, setCat]=useState({age:23, name: "Kelly"});
     const [bColor, setbColor] = useState("w3-blue");
+    const [wSize, setWSize] = useState(1080)
 
     function increment(){
         setCat({...cat, age: cat.age + 1});
@@ -20,10 +21,17 @@ const EffectComp = ()=>{
             setbColor("w3-green");
             console.log("I am to change the color to green")
         }
-    }, [age]);
+    }, []);
+    useEffect(()=>{
+        function handleResize(){
+            setWSize(window.innerWidth);
+        }
+        window.addEventListener("resize",handleResize);
+    },[]);
 
     return (
         <div>
+            <h1>The window size is {wSize}</h1>
         <button onClick={() => increment()} className={'w3-button w3-ripple w3-round w3-margin-left w3-margin-right w3-blue ${bColor}'}>
             Increment
         </button>
