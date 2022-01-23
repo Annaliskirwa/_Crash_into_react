@@ -10,14 +10,25 @@ const AllUsers = ()=>{
                 method: "get",
                 url: "https://api.github.com/users"
             });
-            setUsers(data);
+            setUsers(data.data);
             console.log(data)
         };
         fetchData();
     },[]);
     return(
         <div>
-            <p>This is a list of all github users</p>
+            <h3>This is a list of all github users</h3>
+            <p>The users are {users.length}</p>
+            <div>
+                {
+                    users.map((users)=>{
+                        return <div>
+                            <p>Name: {users.login}</p>
+                            <p>Id:{users.id}</p>
+                        </div>
+                    })
+                }
+            </div>
         </div>
     )
 
