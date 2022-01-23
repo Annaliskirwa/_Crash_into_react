@@ -15,7 +15,7 @@ const EffectComp = ()=>{
 
     useEffect(()=>{
         console.log("I have rendered")
-    }, []);
+    }, [age]);
 
     return (
         <div>
