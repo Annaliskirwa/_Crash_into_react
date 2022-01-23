@@ -2,6 +2,7 @@ import {Bar1, Bar2, MyCatsAge} from "./components/bars";
 import StateButton from "./components/StateButton";
 import EffectComp from "./components/EffectComp";
 import Myform from "./components/Form";
+import AllUsers from "./components/githubusers";
 
 function App() {
   let x = catsAge(23)
@@ -9,7 +10,8 @@ function App() {
     <div>
      {/* <StateButton/> */}
      {/* <EffectComp/> */}
-     <Myform/>
+     {/* <Myform/> */}
+    <AllUsers/>
     </div>
   );
 }
