@@ -2,8 +2,8 @@ import React,{useState} from "react";
 
 const Myform = ()=>{
     let int = {
-        name: "",
-        age: ""
+        name: "Ann",
+        age: "23"
     }
     const [inputs,setInputs] = useState(int);
     return (
@@ -13,11 +13,11 @@ const Myform = ()=>{
             <div className = "w3-card-3 w3-padding">
                 <p>
                     <label>Name</label>
-                    <input type = "text" className="w3-input w3-border"></input>
+                    <input value={inputs.name} type = "text" className="w3-input w3-border"></input>
                 </p>
                 <p>
                     <label>Age</label>
-                    <input type = "text" className="w3-input w3-border"></input>
+                    <input value={inputs.age} type = "text" className="w3-input w3-border"></input>
                 </p>
             </div>
             <div className = "w3-margin-top w3-center">
