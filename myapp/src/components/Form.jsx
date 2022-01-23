@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { useEffect } from "react/cjs/react.development";
 
 const Myform = ()=>{
     let int = {
@@ -6,6 +7,10 @@ const Myform = ()=>{
         age: "23"
     }
     const [inputs,setInputs] = useState(int);
+
+    useEffect(()=>{
+        console.log(inputs)
+    });
     return (
         <div>
             <h1>My cool form</h1>
@@ -13,11 +18,11 @@ const Myform = ()=>{
             <div className = "w3-card-3 w3-padding">
                 <p>
                     <label>Name</label>
-                    <input value={inputs.name} type = "text" className="w3-input w3-border"></input>
+                    <input value={inputs.name} onChange={(e)=>setInputs({...inputs,name:e.target.value})} type = "text" className="w3-input w3-border"></input>
                 </p>
                 <p>
                     <label>Age</label>
-                    <input value={inputs.age} type = "text" className="w3-input w3-border"></input>
+                    <input value={inputs.age} onChange={(e)=>setInputs({...inputs, age:e.target.value})} type = "text" className="w3-input w3-border"></input>
                 </p>
             </div>
             <div className = "w3-margin-top w3-center">
