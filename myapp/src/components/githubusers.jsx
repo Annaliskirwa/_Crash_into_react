@@ -25,6 +25,7 @@ const AllUsers = ()=>{
                         return <div>
                             <p>Name: {users.login}</p>
                             <p>Id:{users.id}</p>
+                            {/* <p>Image: {users.avatar_url}</p> */}
                         </div>
                     })
                 }

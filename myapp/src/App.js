@@ -3,6 +3,8 @@ import StateButton from "./components/StateButton";
 import EffectComp from "./components/EffectComp";
 import Myform from "./components/Form";
 import AllUsers from "./components/githubusers";
+import Nav from "./components/Nav";
+
 
 function App() {
   let x = catsAge(23)
@@ -11,7 +13,8 @@ function App() {
      {/* <StateButton/> */}
      {/* <EffectComp/> */}
      {/* <Myform/> */}
-    <AllUsers/>
+    {/* <AllUsers/> */}
+    < Nav/>
     </div>
   );
 }
