@@ -1,12 +1,17 @@
 import React, {useState} from "react";
 import { Bar1, Bar2 } from "./bars";
+import { useSelector, useDispatch } from "react-redux";
 
 const Nav = ()=>{
-    const [page, setPage] = useState(0);
+    // const [page, setPage] = useState(0);
+    const dispatch = useDispatch();
+    let page = useSelector((store)=>{ store.page})
 
     function nav(n){
-        console.log(n)
-        setPage(n);
+        // console.log(n)
+        // setPage(n);
+        let action = {type:"CHANGE_VALUE", value:n}
+        dispatch(action);
     }
     return(
         <div>
